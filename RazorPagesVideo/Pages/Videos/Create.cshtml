@@ -1,0 +1,54 @@
+﻿@page
+@model RazorPagesVideo.Pages.Videos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Video</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Video.Title" class="control-label"></label>
+                <input asp-for="Video.Title" class="form-control" />
+                <span asp-validation-for="Video.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Video.ReleaseDate" class="control-label"></label>
+                <input asp-for="Video.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Video.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Video.Performer" class="control-label"></label>
+                <input asp-for="Video.Performer" class="form-control" />
+                <span asp-validation-for="Video.Performer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Video.Price" class="control-label"></label>
+                <input asp-for="Video.Price" class="form-control" />
+                <span asp-validation-for="Video.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Video.Rating" class="control-label"></label>
+                <input asp-for="Video.Rating" class="form-control" />
+                <span asp-validation-for="Video.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
